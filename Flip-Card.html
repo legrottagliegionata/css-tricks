@@ -1,0 +1,121 @@
+<!--
+Flip Card:
+Nuovo componente per le card.
+Compatibile con quelle di bootstrap.
+Il componente cambia facciata al passaggio del mouse. come se si girasse una carta
+-->
+
+
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>card rotate</title>
+  <!-- inclusione di bootstrap4 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <!-- -------------------------- -->
+
+  <!-- Codice da includere nel proprio foglio di stile -->
+  <style media="screen">
+    .flip-card {
+      width: 100%;
+      max-width: 1024px;
+      position: relative;
+      margin: 0 auto 40px;
+      border-top: 1px solid #CaCaCa;
+      border-bottom: 1px solid #CaCaCa;
+      box-sizing: border-box;
+      -webkit-perspective: 800px;
+      -moz-perspective: 800px;
+      -o-perspective: 800px;
+      perspective: 800px;
+    }
+
+    .flip {
+      width: 100%;
+      -webkit-transition: -webkit-transform .7s;
+      -moz-transition: -moz-transform .7s;
+      -o-transition: -o-transform .7s;
+      transition: transform .7s;
+      -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
+      -o-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transform-origin: right center;
+      -moz-transform-origin: right center;
+      -o-transform-origin: right center;
+      transform-origin: right center;
+    }
+
+    .flip-card:hover .flip {
+      -webkit-transform: translateX( -100%) rotateY( -180deg);
+      -moz-transform: translateX( -100%) rotateY( -180deg);
+      -o-transform: translateX( -100%) rotateY( -180deg);
+      transform: translateX( -100%) rotateY( -180deg);
+    }
+
+    .flip figure {
+      margin: 0;
+      display: block;
+      width: 100%;
+      line-height: 260px;
+      color: white;
+      text-align: center;
+      font-weight: bold;
+      font-size: 140px;
+
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .flip .front {
+      background: red;
+    }
+    .flip .back {
+      background: blue;
+      -webkit-transform: rotateY( 180deg);
+      -moz-transform: rotateY( 180deg);
+      -o-transform: rotateY( 180deg);
+      transform: rotateY( 180deg);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+  </style>
+</head>
+<!-- -------------------------- -->
+
+<!-- Il codice sotto il commento "Flip Card" è il nuovo componente, il resto è semplice codice preso dalla pagina ufficiale di Bootstrap4 per creare un esempio -->
+<body>
+
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+
+      <!-- Flip card -->
+      <div class="flip-card">
+        <div class="flip">
+          <figure class="front">Front</figure>
+          <figure class="back">Fack</figure>
+        </div>
+      </div>
+      ----------*/
+
+
+    </div>
+
+</body>
+
+</html>
