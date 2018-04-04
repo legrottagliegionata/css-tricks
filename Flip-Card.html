@@ -21,14 +21,22 @@ Il componente cambia facciata al passaggio del mouse. come se si girasse una car
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <!-- -------------------------- -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
 
+      $(".flip-card").click(function(){
+        $(this).children().toggleClass("flip-active");
+      });
+    });
+  </script>
   <!-- Codice da includere nel proprio foglio di stile -->
   <style media="screen">
     .flip-card {
       width: 100%;
       max-width: 1024px;
       position: relative;
-      margin: 0 auto 40px;
+      margin: 0;
       border-top: 1px solid #CaCaCa;
       border-bottom: 1px solid #CaCaCa;
       box-sizing: border-box;
@@ -40,6 +48,7 @@ Il componente cambia facciata al passaggio del mouse. come se si girasse una car
 
     .flip {
       width: 100%;
+      display: flex;
       -webkit-transition: -webkit-transform .7s;
       -moz-transition: -moz-transform .7s;
       -o-transition: -o-transform .7s;
@@ -54,14 +63,16 @@ Il componente cambia facciata al passaggio del mouse. come se si girasse una car
       transform-origin: right center;
     }
 
-    .flip-card:hover .flip {
+    /*.flip-card:hover .flip, */.flip-active{
       -webkit-transform: translateX( -100%) rotateY( -180deg);
       -moz-transform: translateX( -100%) rotateY( -180deg);
       -o-transform: translateX( -100%) rotateY( -180deg);
       transform: translateX( -100%) rotateY( -180deg);
     }
 
+
     .flip figure {
+      flex: 1;
       margin: 0;
       display: block;
       width: 100%;
@@ -77,6 +88,7 @@ Il componente cambia facciata al passaggio del mouse. come se si girasse una car
       background: red;
     }
     .flip .back {
+      height: 100%;
       background: blue;
       -webkit-transform: rotateY( 180deg);
       -moz-transform: rotateY( 180deg);
@@ -106,7 +118,7 @@ Il componente cambia facciata al passaggio del mouse. come se si girasse una car
         <div class="flip">
           <figure class="front">
           <h1>Front</h1>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           </figure>
           <figure class="back">
           <h1>Back</h1>
